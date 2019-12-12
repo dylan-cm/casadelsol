@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casa Del Sol</title>
+    <link href="https://fonts.googleapis.com/css?family=Bahianita|Roboto:100,400|Titillium+Web:400,700|Trade+Winds&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.5.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.5.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.5.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.5.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.5.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <nav class="vertical">
+        <ul>
+            <li><a href="#">
+              <object alt="logo" class="logo" type="image/svg+xml" data="vectorized_stanley_mouse_poster_skull_casa_del_sol_logo.svg"></object>
+              <h1>CASA DEL SOL</h1>
+            </a></li>
+            <li><a href="#">Login / Sign Up</a></li>
+            <!-- <li><a href="#">Merch</a></li> -->
+            <li><a href="#">Calendar</a></li>
+            <!-- <li><a href="#">The Family Album</a></li> -->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+    </nav>
+    <nav class="horizontal">
+        <object alt="menu" class="menu" type="image/svg+xml" data="menu.svg"></object>
+        <a href="#"><object alt="logo" class="logo" type="image/svg+xml" data="vectorized_stanley_mouse_poster_skull_casa_del_sol_logo.svg"></object></a>
+        <object alt="login" class="login" type="image/svg+xml" data="user.svg"></object>
+    </nav>
+    <div class="content">
+        <h1 class="mobile_title">CASA DEL SOL</h1>
+        <div class="start">
+          <h1 class="title">CASA</br>DEL SOL</h1>
+          </br>
+          <a href="google.com"><object alt="down" class="down" type="image/svg+xml" data="down-chevron.svg"></object></a>
+        </div>
+        <div class="hook">
+          <div class="trailer" id="trailer">
+              <img src="bandthumbnail_vign.png" class="band-trailer-thumbnail" alt="Band Trailer Thumbnail">
+          </div>
+          <div class="sign-up" id="sign-up">
+              <h2>GET YOUR WINGS!</h2>
+              <h4>Sign up to our fan club and become an official Strange Angel today.</h4>
+              <ul>
+                  <li>Get notified of upcoming events.</li>
+                  <li>Gain access to our premium Strange Angel
+                      clothing line exclusive to our biggest fans.</li>
+                  <li>Receive the latest video and audio from live 
+                      recordings and exclusive studio sessions.</li>
+              </ul>
+              <div class="form">
+                <input type="text" name="name" id="name" class="name" placeholder="Full Name">
+                <!-- Replace with OAuth -->
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="password" name="password" id="password" placeholder="Password">
+              </div>
+              <button class="sign-up-submit">Sign Up</button>
+          </div>
+        </div>
+        <div class="merch-gallery" id="merch-gallery">
+            <!-- Shopify Store Gallery -->
+        </div>
+        <div class="event-cal" id="event-cal">
+            <h3>Upcoming Shows</h3>
+            <table>
+                <tr>
+                    <td class="event-name"><strong>La Calera</strong></td>
+                    <td><em>Oaxaca, MX</em></td>
+                    <td><em>Sept 20th, 2019</em></td>
+                    <td class="btn"><button class="tickets" disabled="disabled">Sold Out</button></td>
+                </tr>
+                <tr>
+                    <td class="event-name"><strong>Wig Party</strong></td>
+                    <td><em>San Francisco, CA</em></td>
+                    <td><em>Dec 13th, 2019</em></td>
+                    <td class="btn"><button class="tickets" disabled="disabled">Sold Out</button></td>
+                </tr>
+                <tr>
+                    <td class="event-name"><strong>Amado's</strong></td>
+                    <td><em>San Francisco, CA</em></td>
+                    <td><em>Jan 18th, 2020</em></td>
+                    <td class="btn"><a href="https://bpt.me/4448879"><button class="tickets">Buy Now</button></a></td>
+                </tr>
+                <tr>
+                    <td class="event-name"><strong>Private Event</strong></td>
+                    <td><em>San Francisco, CA</em></td>
+                    <td><em>Feb 1st, 2019</em></td>
+                    <td class="btn"><button class="tickets" disabled="disabled">Sold Out</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="band-shot">
+          <img src="bandshot.png" alt="On stage" class="band-shot">
+        </div>
+        <div class="about" id="about">
+            <h3>What is Casa Del Sol?</h3>
+            <div class="about_p">
+              <p>
+                  Casa Del Sol is a new Bay Area super-group of sorts, founded by singer/songwriter/guitarist 
+                  John 'Mad Johnny" Modell, who is joined by Wally Ingram on drums (Sheryl Crow, Crowded House, 
+                  Eric Burdon, Stockholm Syndrome, Wier/Lesh, Jackson Browne, Bonnie Raitt), Mike DiPirro on Bass 
+                  (Free Peoples, Marshall House Project, Bill Kreutzmann), and Mighty Dave Pellicciaro on keyboards 
+                  (Jackmormons, Materialized). The band's original music comprises modern psychedelic soul rock, 
+                  which is laced with ample amounts of blues, jazz and world music.
+              </p>
+              <p>
+                  Casa Del Sol is fresh from their triumphant debut concert in Oaxaca, Mexico where they performed 
+                  "The Family Album", a cycle of spiritual songs focusing on ancestry and human connectedness. Their 
+                  songs, while lyrically very moving, also feature exciting and intense interplay and improvisation 
+                  between the musicians.
+              </p>
+            </div>
+        </div>
+        <div class="band-members" id="band-members">
+            <div class="member-intro" id="john">
+                <img src="dad.png" alt="thumbnail">
+                </br>
+                <strong>John 'Mad Johnny' Modell</strong>
+                </br>
+                <em>Singer / Songwriter / Lead Guitar</em>
+            </div>
+            <div class="member-intro" id="mike">
+                <img src="miked.png" alt="thumbnail">
+                </br>
+                <strong>Mike Depiro</strong>
+                </br>
+                <em>Bassist</em>
+            </div>
+            <div class="member-intro" id="wally">
+                <img src="wally.png" alt="thumbnail">
+                </br>
+                <strong>Wally 'Wally-Llama' Ingram</strong>
+                </br>
+                <em>Drummer</em>
+            </div>
+            <div class="member-intro" id="dave">
+                <img src="dave.png" alt="thumbnail">
+                </br>
+                <strong>Mighty Dave</strong>
+                </br>
+                <em>Keyboardist</em>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    
+    <!-- FIREBASE STUFF -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
