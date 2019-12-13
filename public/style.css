@@ -141,19 +141,20 @@ img.band-trailer-thumbnail {
   margin: 0px;
 }
 
-.sign-up > .form {
+.form {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.sign-up > .form > .name {
+.form > .email {
   grid-column: 1 / span 2;
 }
 
-.form > input {
+input {
   font-size: 1em;
   padding: 8px 0px;
   margin: 4px;
+  min-width: 80px;
 }
 
 button.sign-up-submit {
@@ -294,7 +295,7 @@ em {
   font-style: normal;
 }
 
-.sign-up > .form > input {
+input {
   color: white;
   background-color: #222;
   border: none;
@@ -391,8 +392,15 @@ button:disabled {
   }
 
   .horizontal > div.icon-text > a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100px;
     padding: 16px 0px;
@@ -411,26 +419,28 @@ button:disabled {
     width: 100px;
     vertical-align: middle;
   }
-  
-  .horizontal > .dropdown > button.dropbtn:hover, button.dropbtn:focus {
+
+  .horizontal > .dropdown > button.dropbtn:hover,
+  button.dropbtn:focus {
     background-color: transparent;
   }
-  
+
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #222;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-  
+
   .dropdown-content a {
     color: #fff;
     padding: 12px 16px;
@@ -438,12 +448,14 @@ button:disabled {
     display: block;
     text-shadow: 0 0 0 transparent;
   }
-  
+
   .dropdown a:hover {
     background-color: #333;
   }
-  
-  .show {display: block;}
+
+  .show {
+    display: block;
+  }
 
   .content {
     margin: 180px 0 0 0;
