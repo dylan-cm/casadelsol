@@ -1,7 +1,7 @@
 :root {
   --cds-red: #961138;
   --cds-orange: #f43a31;
-  --cds-yellow: orange;
+  --cds-yellow: rgb(255, 166, 0);
   --cds-teal: #00eabc;
   --cds-blue: #5e14ec;
   --cds-purple: #9d2aec;
@@ -257,7 +257,7 @@ footer {
 }
 
 h1 {
-  font-family: "Bahianita", cursive;
+  font-family: "Bahianita", sans-serif;
   font-size: 2.35em;
   padding: 0px;
   margin: 0px;
@@ -265,7 +265,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Bahianita", cursive;
+  font-family: "Bahianita", sans-serif;
   font-size: 3em;
   margin: 0px 0px 0px 0px;
 }
@@ -365,13 +365,13 @@ button:disabled {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 0px 8px 120px 8px;
+    padding: 0px 0px 120px 0px;
     z-index: 999;
     background: rgba(0, 0, 0, 0) url("suntopbar.png") no-repeat top center fixed;
     background-size: 100% 25vh;
   }
 
-  nav.horizontal > a {
+  a {
     color: #fff;
     font-family: "Titillium Web", sans-serif;
     font-size: 1rem;
@@ -390,6 +390,61 @@ button:disabled {
     margin: 0 20px;
   }
 
+  .horizontal > div.icon-text > a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    padding: 16px 0px;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+  }
+
+  .horizontal > .dropdown > button.dropbtn {
+    background-color: transparent;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    vertical-align: middle;
+  }
+  
+  .horizontal > .dropdown > button.dropbtn:hover, button.dropbtn:focus {
+    background-color: transparent;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-shadow: 0 0 0 transparent;
+  }
+  
+  .dropdown a:hover {
+    background-color: #333;
+  }
+  
+  .show {display: block;}
+
   .content {
     margin: 180px 0 0 0;
   }
@@ -397,6 +452,8 @@ button:disabled {
   .mobile_title {
     display: block;
     font-size: 5rem;
+    color: var(--cds-orange);
+    text-shadow: -1px -2px 0px var(--cds-yellow);
   }
 
   .sign-up > .form {

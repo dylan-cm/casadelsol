@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Casa Del Sol</title>
-    <link href="https://fonts.googleapis.com/css?family=Bahianita|Roboto:100,400|Titillium+Web:400,700|Trade+Winds&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Bahianita|Roboto:100,400|Titillium+Web:400,700|Trade+Winds&display=fallback" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/793774ef0b.js" crossorigin="anonymous"></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.5.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -20,22 +20,42 @@
   <body>
     <nav class="vertical">
         <ul>
-            <li><a href="#">
+            <li><a href="#trailer">
               <object alt="logo" class="logo" type="image/svg+xml" data="vectorized_stanley_mouse_poster_skull_casa_del_sol_logo.svg"></object>
               <h1>CASA DEL SOL</h1>
             </a></li>
-            <li><a href="#">Login / Sign Up</a></li>
+            <li><a href="#sign-up">
+              <!-- <i class="far fa-user-circle fa-2x"></i> -->
+              Sign Up
+            </a></li>
             <!-- <li><a href="#">Merch</a></li> -->
-            <li><a href="#">Calendar</a></li>
+            <li><a href="#event-cal">Calendar</a></li>
             <!-- <li><a href="#">The Family Album</a></li> -->
-            <li><a href="#">About</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://www.facebook.com/Casa-Del-Sol-101443541331890/">Facebook</a></li>
         </ul>
     </nav>
     <nav class="horizontal">
-        <object alt="menu" class="menu" type="image/svg+xml" data="menu.svg"></object>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn icoon-text">
+                <!-- <i class="fas fa-bars fa-2x" alt="menu"></i> -->
+                Menu
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#trailer">
+                <!-- <i class="far fa-user-circle fa-2x"></i> -->
+                Sign Up
+              </a>
+              <a href="#name">Calendar</a>
+              <a href="#band-shot">About</a>
+              <a href="#contact">Facebook</a>
+            </div>
+          </div>
         <a href="#"><object alt="logo" class="logo" type="image/svg+xml" data="vectorized_stanley_mouse_poster_skull_casa_del_sol_logo.svg"></object></a>
-        <object alt="login" class="login" type="image/svg+xml" data="user.svg"></object>
+        <div class="icon-text"><a href="#trailer" >
+          <!-- <i class="far fa-user-circle fa-2x"></i> -->
+          Sign Up
+        </a></div>
     </nav>
     <div class="content">
         <h1 class="mobile_title">CASA DEL SOL</h1>
@@ -99,16 +119,16 @@
                 </tr>
             </table>
         </div>
-        <div class="band-shot">
+        <div class="band-shot" id="band-shot">
           <img src="bandshot.png" alt="On stage" class="band-shot">
         </div>
         <div class="about" id="about">
-            <h3>What is Casa Del Sol?</h3>
+            <h3>Who is Casa Del Sol?</h3>
             <div class="about_p">
               <p>
                   Casa Del Sol is a new Bay Area super-group of sorts, founded by singer/songwriter/guitarist 
                   John 'Mad Johnny" Modell, who is joined by Wally Ingram on drums (Sheryl Crow, Crowded House, 
-                  Eric Burdon, Stockholm Syndrome, Wier/Lesh, Jackson Browne, Bonnie Raitt), Mike DiPirro on Bass 
+                  Eric Burdon, Stockholm Syndrome, Weir/Lesh, Jackson Browne, Bonnie Raitt), Mike DiPirro on Bass 
                   (Free Peoples, Marshall House Project, Bill Kreutzmann), and Mighty Dave Pellicciaro on keyboards 
                   (Jackmormons, Materialized). The band's original music comprises modern psychedelic soul rock, 
                   which is laced with ample amounts of blues, jazz and world music.
@@ -127,12 +147,12 @@
                 </br>
                 <strong>John 'Mad Johnny' Modell</strong>
                 </br>
-                <em>Singer / Songwriter / Lead Guitar</em>
+                <em>Singer / Songwriter / Guitar</em>
             </div>
             <div class="member-intro" id="mike">
                 <img src="miked.png" alt="thumbnail">
                 </br>
-                <strong>Mike Depiro</strong>
+                <strong>Mike DePirro</strong>
                 </br>
                 <em>Bassist</em>
             </div>
@@ -146,13 +166,35 @@
             <div class="member-intro" id="dave">
                 <img src="dave.png" alt="thumbnail">
                 </br>
-                <strong>Mighty Dave</strong>
+                <strong>Dave "Mighty Dave" Pellicciaro</strong>
                 </br>
                 <em>Keyboardist</em>
             </div>
         </div>
     </div>
     <footer></footer>
+
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
     
     <!-- FIREBASE STUFF -->
     <script>
