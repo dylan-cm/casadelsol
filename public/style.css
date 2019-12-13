@@ -67,6 +67,7 @@ nav.vertical {
   -ms-flex-item-align: start;
   align-self: flex-start;
   position: fixed;
+  transform: translate3d(0,0,0);
 }
 
 nav.vertical > ul {
@@ -146,8 +147,13 @@ img.band-trailer-thumbnail {
   grid-template-columns: 1fr 1fr;
 }
 
-.form > .email {
+.email {
   grid-column: 1 / span 2;
+}
+
+.mc-field-group {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 input {
@@ -364,6 +370,7 @@ button:disabled {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: fixed;
+    transform: translate3d(0,0,0);
     top: 0;
     width: 100%;
     padding: 0px 0px 120px 0px;
