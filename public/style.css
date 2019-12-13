@@ -375,8 +375,21 @@ button:disabled {
     width: 100%;
     padding: 0px 0px 120px 0px;
     z-index: 999;
-    background: rgba(0, 0, 0, 0) url("suntopbar.png") no-repeat top center fixed;
+    /* background: transparent url("suntopbar.png") no-repeat top center fixed;
+     
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
     background-size: 100% 25vh;
+    background-attachment: fixed; */
+  }
+
+  nav.horizontal > img {
+    position: fixed;
+    transform: translate3d(0,0,0);
+    height: 20vh;
+    width: 100%;
+    z-index: -1;
   }
 
   a {
