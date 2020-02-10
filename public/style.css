@@ -28,7 +28,6 @@ html {
 }
 
 nav.horizontal,
-.merch-gallery,
 .mobile_title {
   display: none;
 }
@@ -67,7 +66,7 @@ nav.vertical {
   -ms-flex-item-align: start;
   align-self: flex-start;
   position: fixed;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 nav.vertical > ul {
@@ -187,6 +186,10 @@ div.band-members {
   background-color: rgba(14, 14, 14, 0.75);
   padding: 0 10px;
   border-radius: 10px;
+}
+
+.merch-gallery {
+  padding-top: 24px;
 }
 
 .event-cal {
@@ -370,7 +373,7 @@ button:disabled {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: fixed;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     top: 0;
     width: 100%;
     padding: 0px 0px 120px 0px;
@@ -386,7 +389,7 @@ button:disabled {
 
   nav.horizontal > img {
     position: fixed;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     height: 20vh;
     width: 100%;
     z-index: -1;
