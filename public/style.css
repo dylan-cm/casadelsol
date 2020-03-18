@@ -93,7 +93,7 @@ li > a:hover {
   text-shadow: 1px 1px 15px #c941ff;
 }
 
-object.logo {
+img.logo {
   width: calc(5vw + 10vh);
 }
 
@@ -404,7 +404,7 @@ button:disabled {
     text-shadow: 1px 1px 5px orangered;
   }
 
-  object.logo {
+  img.logo {
     width: 80px;
   }
 
